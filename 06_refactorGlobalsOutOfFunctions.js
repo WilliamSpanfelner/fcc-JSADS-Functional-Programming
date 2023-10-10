@@ -16,25 +16,34 @@ Note: Both functions should return an array, and any new
 parameters should be added before the bookName parameter.
 */
 // The global variable
-const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+const bookList = ["The Hound of the Baskervilles", 
+"On The Electrodynamics of Moving Bodies", 
+"Philosophiæ Naturalis Principia Mathematica", 
+"Disquisitiones Arithmeticae"];
 
 // Change code below this line
-function add(bookName) {
-
-  bookList.push(bookName);
-  return bookList;
+function add(bookList, bookName) {
+    let newBookList = bookList.slice();  // Copy the array to a new array 
+    newBookList.push(bookName);
+    return newBookList;
   
   // Change code above this line
 }
 
 // Change code below this line
-function remove(bookName) {
-  const book_index = bookList.indexOf(bookName);
-  if (book_index >= 0) {
-
-    bookList.splice(book_index, 1);
-    return bookList;
+function remove(bookList, bookName) {
+    let newBookList = bookList.slice();
+    const book_index = newBookList.indexOf(bookName);
+    if (book_index >= 0) {
+        newBookList.splice(book_index, 1);
+        return newBookList;
 
     // Change code above this line
     }
 }
+
+let newList = add(bookList, "A Brief History of Time");
+console.log(bookList, newList);
+
+newList = remove(bookList, "On The Electrodynamics of Moving Bodies");
+console.log(bookList, newList);
