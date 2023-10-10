@@ -15,8 +15,11 @@ then returns a result after increasing the value by one.
 let fixedValue = 4;
 
 // Only change code below this line
-function incrementer() {
-
+function incrementer(fixedValue) {
+    return fixedValue + 1;
 
   // Only change code above this line
 }
+
+let newValue = incrementer(fixedValue);
+console.log(fixedValue, newValue);  // 4 5
