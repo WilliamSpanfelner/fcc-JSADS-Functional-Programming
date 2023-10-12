@@ -12,7 +12,7 @@ Array.prototype.myMap = function(callback) {
     // Only change code below this line
     console.log(this, callback);
     for (let i = 0; i < this.length; i++) {
-        newArray.push(callback(this[i], i, this));
+        newArray.push(callback(this[i], i, this));  // this[i] = element; i = index; this = array
     }
 
     // Only change code above this line
