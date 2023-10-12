@@ -11,9 +11,7 @@ Array.prototype.myMap = function(callback) {
     const newArray = [];
     // Only change code below this line
     console.log(this, callback);
-    for (let i = 0; i < this.length; i++) {
-        newArray.push(callback(this[i], i, this));  // this[i] = element; i = index; this = array
-    }
+    this.forEach((...arg) => newArray.push(callback(...arg)));
 
     // Only change code above this line
     return newArray;
