@@ -23,6 +23,8 @@ Do not mutate the original array provided to the function.
 */
 
 function nonMutatingSplice(cities) {
-
-    return cities.splice(3);
+    const newArray = cities.slice(0, 3);
+    return newArray;
 }
+
+console.log(nonMutatingSplice(["Chicago", "Delhi", "Islamabad", "London", "Berlin"]));
