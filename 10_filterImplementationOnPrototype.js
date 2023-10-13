@@ -9,7 +9,9 @@ can be accessed in the myFilter method using this.
 Array.prototype.myFilter = function(callback) {
     const newArray = [];
     // Only change code below this line
-  
+    this.forEach(x => console.log(x));  // iterate through array and log
     // Only change code above this line
     return newArray;
   };
+
+  [23, 65, 98, 5, 13].myFilter(item => item % 2)
