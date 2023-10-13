@@ -145,7 +145,7 @@ const watchList = [
   
 //   const filteredList = watchList.map(movie => ({title: movie.Title, rating: movie.imdbRating})).filter(movie => movie.imdbRating > 8.0);
   const filteredList = watchList
-  .filter(movie => Number(movie.imdbRating) > 8.0)  // Create a new array where ratings > 8.0 coercing imdbRating to a number
+  .filter(movie => Number(movie.imdbRating) >= 8.0)  // Create a new array where ratings > 8.0 coercing imdbRating to a number
   .map(movie => ({title: movie.Title, rating: movie.imdbRating}));  // Create a new array from the filtered items with only the specified keys
   
   // Only change code above this line
