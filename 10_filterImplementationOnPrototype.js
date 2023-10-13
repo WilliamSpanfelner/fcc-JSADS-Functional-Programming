@@ -11,9 +11,9 @@ Array.prototype.myFilter = function(callback) {
     // Only change code below this line
     console.log(this);
     for (let i = 0; i < this.length; i++) {
-        (callback(this[i], i, this) ?
-        newArray.push(this[i]):
-        i);
+        if (callback(this[i], i, this)) {
+            newArray.push(this[i])
+        };
     }
     // this.forEach((element, index, array) => 
     //     (callback(element, index, array) ? 
