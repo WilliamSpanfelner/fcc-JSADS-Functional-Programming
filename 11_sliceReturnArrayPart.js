@@ -1,4 +1,5 @@
 // Return Part of an Array Using the slice Method
+
 /* The slice array method returns a copy of a group
 of array elements and can take two argument: 
 1. an index of where to begin the slice;
