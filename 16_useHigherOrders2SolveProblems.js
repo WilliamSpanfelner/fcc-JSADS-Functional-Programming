@@ -15,6 +15,9 @@ loops or the forEach() function.
 
 const squareList = arr => {
   // Only change code below this line
+  const arrIntegers = arr.filter((element) => Number.isInteger(element));
+  console.log(arrIntegers);
+
   return arr;
   // Only change code above this line
 };
