@@ -15,10 +15,7 @@ loops or the forEach() function.
 
 const squareList = arr => {
   // Only change code below this line
-  const arrIntegers = arr.filter((element) => Number.isInteger(element) && element > 0);
-  
-//   const newArray = arrIntegers.map((element) => element ** 2);
-//   console.log(arrIntegers, newArray);
+  const arrIntegers = arr.filter((element) => Number.isInteger(element) && element >= 0);
 
   return arrIntegers.map((element) => element ** 2);
   // Only change code above this line
