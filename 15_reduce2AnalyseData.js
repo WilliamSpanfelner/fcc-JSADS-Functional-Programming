@@ -173,7 +173,8 @@ const watchList = [
     let averageRating;
     const cNolanFilms = watchList.filter((film) => 
     (film.Director == 'Christopher Nolan'));  // Returns a array of all the films of interest
-
+    // console.log("cNolanFilms: " + cNolanFilms + cNolanFilms.length);
+    const ratingTotal = cNolanFilms.reduce((sum, film) => sum + Number(film.imdbRating), 0);  // Total all ratings
     // Only change code above this line
     return averageRating;
   }
