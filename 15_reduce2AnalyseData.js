@@ -29,8 +29,19 @@ const usersObj = users.reduce((obj, user) => {
     obj[user.name] = user.age;
     return obj;
 }, {});
-
 console.log(usersObj);  // {John: 34, Amy: 20, camperCat: 10}
+
+const usersAges = users.reduce((obj, user) => {
+  obj[user.age] = user.name;
+  return obj;
+}, {});
+console.log(usersAges);
+
+// const usersNames = users.reduce((obj, user) => {
+//   obj["name"] = user.name;
+//   return obj;
+// }, {});
+// console.log(usersNames);
 
 /* 
 The variable watchList holds an array of objects with information on 
@@ -160,8 +171,9 @@ const watchList = [
   function getRating(watchList) {
     // Only change code below this line
     let averageRating;
-  
-  
+    const cNolanFilms = watchList.filter((film) => 
+    (film.Director == 'Christopher Nolan'));  // Returns a array of all the films of interest
+
     // Only change code above this line
     return averageRating;
   }
