@@ -21,6 +21,7 @@ function urlSlug(title) {
     const titleArray = title.split(/\s/);
     const lctitleArray = titleArray.map((element) => element.toLowerCase());
     const noEmpties = lctitleArray.filter((element) => element != '');
+    const formattedURL = noEmpties.join("-");
 
 }
 // Only change code above this line
