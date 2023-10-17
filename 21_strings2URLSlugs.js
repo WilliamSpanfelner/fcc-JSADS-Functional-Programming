@@ -20,6 +20,7 @@ The output should not have any spaces;
 function urlSlug(title) {
     const titleArray = title.split(/\s/);
     const lctitleArray = titleArray.map((element) => element.toLowerCase());
+    const noEmpties = lctitleArray.filter((element) => element != '');
 
 }
 // Only change code above this line
