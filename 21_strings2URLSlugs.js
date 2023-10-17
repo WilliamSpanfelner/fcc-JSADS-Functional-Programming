@@ -18,13 +18,17 @@ The output should not have any spaces;
 */
 // Only change code below this line
 function urlSlug(title) {
-    const titleArray = title.split(/\s/);
-    const lctitleArray = titleArray.map((element) => element.toLowerCase());
-    const noEmpties = lctitleArray.filter((element) => element != '');
-    const formattedURL = noEmpties.join("-");
-    console.log(titleArray, lctitleArray, noEmpties, formattedURL);
-    return formattedURL;
+    // const titleArray = title.split(/\s/);
+    // const lctitleArray = titleArray.map((element) => element.toLowerCase());
+    // const noEmpties = lctitleArray.filter((element) => element != '');
+    // const formattedURL = noEmpties.join("-");
+    // console.log(titleArray, lctitleArray, noEmpties, formattedURL);
+    return title
+    .split(/\s/)
+    .filter((element) => element != '')
+    .map((element) => element.toLowerCase())
+    .join("-");
 }
 // Only change code above this line
-// console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
-console.log(urlSlug(" Winter Is  Coming"));
+console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
+// console.log(urlSlug(" Winter Is  Coming"));
