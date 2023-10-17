@@ -22,7 +22,8 @@ function urlSlug(title) {
     const lctitleArray = titleArray.map((element) => element.toLowerCase());
     const noEmpties = lctitleArray.filter((element) => element != '');
     const formattedURL = noEmpties.join("-");
-
+    console.log(titleArray, lctitleArray, noEmpties, formattedURL);
+    return formattedURL;
 }
 // Only change code above this line
 // console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
