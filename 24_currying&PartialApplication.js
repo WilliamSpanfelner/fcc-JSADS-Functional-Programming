@@ -35,3 +35,16 @@ function impartial(x, y, z) {
 
 const partialFn = impartial.bind(this, 1, 2);
 console.log(partialFn(10));  // 13
+
+/*
+Fill in the body of the add function so it uses currying to add 
+parameters x, y, and z.
+*/
+function add(x) {
+    // Only change code below this line
+
+  
+    // Only change code above this line
+  }
+  
+  add(10)(20)(30);
