@@ -140,15 +140,15 @@ const watchList = [
       "Type": "movie",
       "Response": "True"
     }
-  ];
+];
   
-  // Only change code below this line
+// Only change code below this line
   
-  const ratings = watchList.map(movie => ({title: movie.Title, rating: movie.imdbRating}));
+const ratings = watchList.map(movie => ({title: movie.Title, rating: movie.imdbRating}));
 //   for (let i = 0; i < watchList.length; i++) {
 //     ratings.push({title: watchList[i]["Title"], rating: watchList[i]["imdbRating"]});
 //   }
   
-  // Only change code above this line
-  
-  console.log(JSON.stringify(ratings));
+// Only change code above this line
+
+console.log(JSON.stringify(ratings));
