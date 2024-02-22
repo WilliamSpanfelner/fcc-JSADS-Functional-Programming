@@ -144,10 +144,17 @@ const watchList = [
   // Only change code below this line
   
 //   const filteredList = watchList.map(movie => ({title: movie.Title, rating: movie.imdbRating})).filter(movie => movie.imdbRating > 8.0);
-  const filteredList = watchList
-  .filter(movie => Number(movie.imdbRating) >= 8.0)  // Create a new array where ratings > 8.0 coercing imdbRating to a number
-  .map(movie => ({title: movie.Title, rating: movie.imdbRating}));  // Create a new array from the filtered items with only the specified keys
-  
-  // Only change code above this line
-  
-  filteredList.forEach(item => console.log(item));
+const filteredList = watchList
+.filter(movie => Number(movie.imdbRating) >= 8.0)  // Create a new array where ratings > 8.0 coercing imdbRating to a number
+.map(movie => ({title: movie.Title, rating: movie.imdbRating}));  // Create a new array from the filtered items with only the specified keys
+
+// Only change code above this line
+
+filteredList.forEach(item => console.log(item));
+
+// the filter method returns a new array. To remove an array item from 
+// an array whilst simultaneously preserving the original array can be acheived as follows:
+const animals = ['cat','dog','elephant','lion','tiger','mouse'];
+const selectedAnimals = animals.filter(item => item != animals[2]);
+console.log(selectedAnimals);
+console.log(animals);
